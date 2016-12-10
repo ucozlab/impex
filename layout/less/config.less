@@ -1,0 +1,152 @@
+@font: 'Open Sans', Arial, sans-serif;
+@mainfont: 18px;
+@mainLineHeight: @mainfont*2;
+
+@main: #545d79;
+@white:  	#ffffff;
+@gray:   	#777777;
+@blue:  	#62bdbd;
+@red:    	#e8645a;
+
+.basefont {
+	font-family: @font;
+	color: @main;
+	font-size: @mainfont;
+	line-height: @mainLineHeight;
+	font-weight: normal;
+}
+.fontawesome {
+	display: inline-block;
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: inherit;
+	text-rendering: auto;
+}
+.border-radius( @radius: 3px) {
+	border-radius: @radius;
+}
+.background-clip {
+	background-clip: padding-box;
+}
+.topleftradius( @topleftradius: 3px) {
+	border-top-left-radius: @topleftradius;
+}
+.toprightradius( @toprightradius: 3px) {
+	border-top-right-radius: @toprightradius;
+}
+.bottomleftradius( @bottomleftradius: 3px) {
+	border-bottom-left-radius: @bottomleftradius;
+}
+.bottomrightradius( @bottomrightradius: 3px) {
+	border-bottom-right-radius: @bottomrightradius;
+}
+.borderradiusnone {
+	border-radius: 0;
+}
+.round {
+	border-radius: 50%;
+}
+.transition {
+	transition: all 0.3s ease;
+}
+.transition-event(@event) {
+	transition: @event;
+}
+.transition-property(@string) {
+	transition-property: @string;
+}
+.transition-delay(@event) {
+	transition-delay: @event;
+}
+.transform-origin(@event) {
+	transform-origin: @event;
+}
+.transformnone {
+	transform: none;
+}
+.transform(@string) {
+	transform: @string;
+}
+.box-shadow (@string) {
+	box-shadow: @string;
+}
+.box-sizing (@string) {
+	box-sizing: @string;
+}
+.rotate (@deg) {
+	transform: rotate(@deg);
+}
+.rotate45 {
+	.rotate(45deg);
+}
+.reverted {
+	.rotate(180deg);
+}
+.blur (@event) {
+	filter: blur(@event);
+}
+.appearancenone {
+	appearance: none;
+}
+.userselectnone {
+	user-select: none;
+}
+.displayflex {
+	display: flex;
+}
+.no-select, .no-select * {
+	user-select: none;
+}
+.displaynone, .collapse {
+	display: none;
+}
+.wrapper {
+	padding: 0 42px;
+}
+.overflow {
+	overflow: hidden;
+}
+.centertext,
+.text-center {
+	text-align: center;
+}
+.text-right {
+	text-align: right;
+}
+.text-left {
+	text-align: left;
+}
+.pull-left {
+	float: left;
+}
+.pull-right {
+	float: right;
+}
+.clearfix {
+	&:after, &:before {
+		content: " ";
+		display: block;
+		clear: both;
+		height: 0;
+		overflow: hidden;
+	}
+}
+.table {
+	display: table;
+	width: 100%;
+}
+.table-cell {
+	display: table-cell;
+	vertical-align: middle;
+}
+.inline-block {
+	display: inline-block;
+	vertical-align: middle;
+}
+.uppercase {
+	text-transform: uppercase;
+}
+.no-padding {
+	&-right {
+		padding-right: 0;
+	}
+}

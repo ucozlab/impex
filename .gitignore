@@ -1,0 +1,7 @@
+.idea
+design
+node_modules/*
+!/node_modules/jquery
+!/node_modules/font-awesome
+!/node_modules/npm-font-open-sans
+!/node_modules/bxslider

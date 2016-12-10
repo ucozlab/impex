@@ -1,0 +1,46 @@
+@import (reference) "config.less";
+.header {
+	height: 80px;
+	padding: 22px 0;
+	a {
+
+	}
+}
+.logo {
+	text-transform: uppercase;
+	font-weight: 800;
+	height: auto;
+	float: none;
+	padding: 0;
+	font-size: 36px;
+	line-height: 30px;
+	color: @white;
+	&:hover {
+
+	}
+}
+.nav {
+	&-item {
+		display: inline-block;
+		margin: 0 6px;
+		position: relative;
+		.nav-link {
+			.border-radius(4px);
+			display: inline-block;
+			text-transform: uppercase;
+			font-size: 14px;
+			line-height: 30px;
+			color: @white;
+			padding: 0 13px;
+			border-bottom: 2px solid transparent;
+		}
+		&:hover > .nav-link {
+
+		}
+		&.nav-item--active {
+			.nav-link {
+
+			}
+		}
+	}
+}

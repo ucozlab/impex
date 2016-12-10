@@ -1,0 +1,56 @@
+@import (reference) "config.less";
+html, body {
+	height: 100%;
+}
+body {
+	background-color: darken(@white, 4.7%);
+	.basefont;
+}
+a,
+input,
+textarea,
+.button {
+	.transition;
+}
+a {
+	text-decoration: none;
+	&:hover {
+		outline: 0;
+	}
+}
+.link {
+	text-decoration: underline;
+	&:hover {
+		text-decoration: none;
+	}
+}
+h2, .h2 {
+	text-transform: uppercase;
+	font-size: 40px;
+	line-height: 48px;
+	font-weight: 600;
+}
+h3, .h3 {
+	font-size: 30px;
+	line-height: 36px;
+	font-weight: 600;
+}
+h4, .h4 {
+	font-size: 16px;
+	font-weight: 800;
+}
+h5, .h5 {
+	font-size: 16px;
+	line-height: 19px;
+	font-weight: 800;
+	margin: 0 0 20px 0;
+}
+.page {
+	min-height: 100%;
+	margin-bottom: -350px;
+}
+
+.footer-clearfix {
+	clear: both;
+	height: 350px;
+}
