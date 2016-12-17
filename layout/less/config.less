@@ -1,12 +1,20 @@
-@font: 'Open Sans', Arial, sans-serif;
+@font: 'Open Sans', 'PT Sans', Arial, sans-serif;
 @mainfont: 18px;
 @mainLineHeight: @mainfont*2;
+@main:  #545d79;
+@white: #ffffff;
 
-@main: #545d79;
-@white:  	#ffffff;
-@gray:   	#777777;
-@blue:  	#62bdbd;
-@red:    	#e8645a;
+@blue:     #76addb;
+@blue2:    #4d88ba;
+@blue3:    #2c6697;
+@p_title:  #4b6eb3;
+@red:      #d2232a;
+@red2:     #bf1f26;
+@gray:     #cbd0df;
+@yellow:   #fdfab0;
+@title:    #3f4a6c;
+@darkblue: #27314f;
+@bluelight:#727b98;
 
 .basefont {
 	font-family: @font;
@@ -14,6 +22,13 @@
 	font-size: @mainfont;
 	line-height: @mainLineHeight;
 	font-weight: normal;
+}
+.smalltext {
+	font-size: 14px;
+	line-height: 24px;
+}
+.ptsans {
+	font-family: 'PT Sans', sans-serif;
 }
 .fontawesome {
 	display: inline-block;
@@ -148,5 +163,28 @@
 .no-padding {
 	&-right {
 		padding-right: 0;
+	}
+}
+.button {
+	.inline-block;
+	text-align: center;
+	padding: 0 25px;
+	line-height: 40px;
+	border: 1px solid @red;
+	background: none;
+	color: @red;
+	&:hover {
+		color: @white;
+		background-color: @red;
+	}
+	&:focus, &:active {
+		color: @white;
+		background-color: @red2;
+		border: 1px solid @red2;
+	}
+	&.button-small {
+		padding: 0;
+		max-width: 170px;
+		width: 100%;
 	}
 }

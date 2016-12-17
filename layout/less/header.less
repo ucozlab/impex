@@ -1,46 +1,83 @@
 @import (reference) "config.less";
 .header {
-	height: 80px;
-	padding: 22px 0;
-	a {
-
+	.table {
+		table-layout: fixed;
+		height: 120px;
+		border-bottom: 1px solid @gray;
 	}
 }
 .logo {
+	&-img {
+		.inline-block;
+		width: 178px;
+		height: 73px;
+		margin-right: 25px;
+	}
+	&-title {
+		.inline-block;
+		.smalltext;
+		width: 42%;
+	}
+}
+.address {
+	text-align: center;
 	text-transform: uppercase;
-	font-weight: 800;
-	height: auto;
-	float: none;
-	padding: 0;
-	font-size: 36px;
-	line-height: 30px;
-	color: @white;
-	&:hover {
-
+	font-style: normal;
+	i {
+		font-size: 24px;
+	}
+	&-title {
+		font-weight: bold;
+		display: block;
+		line-height: 24px;
+	}
+	&-description {
+		font-size: 14px;
+	}
+}
+.phones {
+	.inline-block;
+	&-item {
+		.smalltext;
+		text-transform: uppercase;
+		display: block;
+		margin: 0 0 5px 0;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		a {
+			color: inherit;
+			&:hover {
+				color: @blue2;
+			}
+		}
+	}
+}
+.callback {
+	.inline-block;
+	text-align: center;
+	margin: 0 0 0 25px;
+	&-title {
+		.smalltext;
+		display: block;
+		text-transform: uppercase;
+		font-weight: bold;
+		margin: 0 0 15px 0;
 	}
 }
 .nav {
+	text-align: center;
+	line-height: 60px;
 	&-item {
+		.ptsans;
 		display: inline-block;
-		margin: 0 6px;
-		position: relative;
-		.nav-link {
-			.border-radius(4px);
-			display: inline-block;
-			text-transform: uppercase;
-			font-size: 14px;
-			line-height: 30px;
-			color: @white;
-			padding: 0 13px;
-			border-bottom: 2px solid transparent;
-		}
-		&:hover > .nav-link {
-
-		}
-		&.nav-item--active {
-			.nav-link {
-
-			}
+		margin: 0 15px;
+		text-transform: uppercase;
+		color: inherit;
+		font-weight: bold;
+		font-size: 16px;
+		&:hover {
+			color: @blue2;
 		}
 	}
 }

@@ -3,7 +3,7 @@ html, body {
 	height: 100%;
 }
 body {
-	background-color: darken(@white, 4.7%);
+	background-color: @white;
 	.basefont;
 }
 a,
@@ -13,10 +13,18 @@ textarea,
 	.transition;
 }
 a {
+	color: @blue;
 	text-decoration: none;
 	&:hover {
 		outline: 0;
+		color: @blue2;
 	}
+	&:focus, &:active {
+		color: @blue3;
+	}
+}
+section {
+	padding: 40px 0;
 }
 .link {
 	text-decoration: underline;
@@ -24,33 +32,146 @@ a {
 		text-decoration: none;
 	}
 }
-h2, .h2 {
+h1, .h1 {
+	display: block;
 	text-transform: uppercase;
-	font-size: 40px;
-	line-height: 48px;
-	font-weight: 600;
+	font-size: 30px;
+}
+h2, .h2 {
+	display: block;
+	text-transform: uppercase;
+	font-size: 24px;
 }
 h3, .h3 {
-	font-size: 30px;
-	line-height: 36px;
-	font-weight: 600;
+	display: block;
+	text-transform: uppercase;
+	font-size: 20px;
 }
 h4, .h4 {
-	font-size: 16px;
-	font-weight: 800;
+	display: block;
+	text-transform: uppercase;
+	font-size: 18px;
 }
 h5, .h5 {
+	display: block;
+	text-transform: uppercase;
 	font-size: 16px;
-	line-height: 19px;
-	font-weight: 800;
-	margin: 0 0 20px 0;
 }
-.page {
-	min-height: 100%;
-	margin-bottom: -350px;
+article {
+	p {
+		margin-bottom: 15px;
+	}
+}
+.title {
+	.ptsans;
+	font-size: 30px;
+	margin:0 0 30px 0;
+	padding: 0 0 30px 0;
+	border-bottom: 1px solid @gray;
+	color: @title;
+}
+.title24 {
+	.ptsans;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 24px;
+}
+.main {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,d5e6f9+100 */
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffffff 0%, #d5e6f9 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#d5e6f9 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #ffffff 0%,#d5e6f9 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d5e6f9',GradientType=0 ); /* IE6-9 */
+	&-splash {
+		padding-bottom: 400px;
+	}
 }
 
-.footer-clearfix {
-	clear: both;
-	height: 350px;
+.promo {
+	height: 520px;
+	background: url("../img/main.jpg") center center no-repeat;
+	position: relative;
+	padding: 0;
+	&:before {
+		content: "";
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(22,52,113,0.65);
+	}
+	&-content {
+		height: 520px;
+		position: relative;
+		&__text {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+			color: @white;
+			h1 {
+				font-size: 60px;
+				line-height: 72px;
+				margin-bottom: 30px;
+			}
+			h3 {
+				text-transform: none;
+				font-size: 24px;
+				line-height: 72px;
+			}
+		}
+	}
+}
+.card {
+	text-align: center;
+	&-img {
+		line-height: 110px;
+		position: relative;
+		svg {
+			fill: @p_title;
+		}
+		&:after {
+			content: "";
+			display: block;
+			position: absolute;
+			left: 0;
+			bottom: 17px;
+			width: 100%;
+			height: 1px;
+			background-color: @gray;
+		}
+	}
+	&-description {
+		margin-bottom: 15px;
+	}
+}
+.product {
+	background-color: @white;
+	text-align: center;
+	&-link {
+		display: block;
+		&__img {
+			display: inline-block;
+			margin-bottom: 5px;
+		}
+		&__title {
+			.h4;
+			font-weight: bold;
+			color: @p_title;
+			margin-bottom: 10px;
+		}
+	}
+	&-price {
+		margin-bottom: 10px;
+		span {
+			display: inline-block;
+			padding: 5px 15px;
+			background-color: @yellow;
+		}
+	}
+	&-button {
+	}
 }
