@@ -1,8 +1,8 @@
 $(document).ready(function(){
 
-	$('.products').bxSlider({
+	$('.products-slider').bxSlider({
 		auto: true,
-		slideWidth: 270,
+		slideWidth: 262.5,
 		slideMargin: 30,
 		minSlides: 1,
 		maxSlides: 6,

@@ -4,17 +4,21 @@
 @main:  #545d79;
 @white: #ffffff;
 
-@blue:     #76addb;
-@blue2:    #4d88ba;
-@blue3:    #2c6697;
-@p_title:  #4b6eb3;
-@red:      #d2232a;
-@red2:     #bf1f26;
-@gray:     #cbd0df;
-@yellow:   #fdfab0;
-@title:    #3f4a6c;
-@darkblue: #27314f;
-@bluelight:#727b98;
+@blue:       #76addb;
+@blue2:      #4d88ba;
+@blue3:      #2c6697;
+@p_title:    #4b6eb3;
+@red:        #d2232a;
+@red2:       #bf1f26;
+@gray:       #cbd0df;
+@yellow:	 #fdfab0;
+@title:		 #3f4a6c;
+@darkblue:	 #27314f;
+@bluelight:  #727b98;
+@bluelight2: #7997d4;
+@input:      #989eaf;
+@date:       #aeb2bd;
+@subscribe:  #d4dfee;
 
 .basefont {
 	font-family: @font;
@@ -35,6 +39,13 @@
 	font: normal normal normal 14px/1 FontAwesome;
 	font-size: inherit;
 	text-rendering: auto;
+}
+.shadowed {
+	box-shadow: 0 0 8px 0 @gray;
+}
+.blue {
+	color: @p_title;
+	font-weight: normal;
 }
 .border-radius( @radius: 3px) {
 	border-radius: @radius;

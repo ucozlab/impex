@@ -23,6 +23,14 @@ a {
 		color: @blue3;
 	}
 }
+input[type="text"], input[type="email"], input[type="tel"], input[type="reset"], textarea {
+	padding: 0 10px;
+	border: 1px solid @input;
+	&:focus, &:active {
+		outline: 0;
+		border: 1px solid @blue2;
+	}
+}
 section {
 	padding: 40px 0;
 }
@@ -33,9 +41,15 @@ section {
 	}
 }
 h1, .h1 {
+	.ptsans;
 	display: block;
 	text-transform: uppercase;
 	font-size: 30px;
+	font-weight: bold;
+	padding-bottom: 30px;
+	border-bottom: 1px solid @gray;
+	margin-bottom: 45px;
+	color: @title;
 }
 h2, .h2 {
 	display: block;
@@ -62,14 +76,6 @@ article {
 		margin-bottom: 15px;
 	}
 }
-.title {
-	.ptsans;
-	font-size: 30px;
-	margin:0 0 30px 0;
-	padding: 0 0 30px 0;
-	border-bottom: 1px solid @gray;
-	color: @title;
-}
 .title24 {
 	.ptsans;
 	text-transform: uppercase;
@@ -77,6 +83,8 @@ article {
 	font-size: 24px;
 }
 .main {
+	position: relative;
+	z-index: 1;
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,d5e6f9+100 */
 	background: #ffffff; /* Old browsers */
 	background: -moz-linear-gradient(top,  #ffffff 0%, #d5e6f9 100%); /* FF3.6-15 */
@@ -84,7 +92,8 @@ article {
 	background: linear-gradient(to bottom,  #ffffff 0%,#d5e6f9 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d5e6f9',GradientType=0 ); /* IE6-9 */
 	&-splash {
-		padding-bottom: 400px;
+		background: url("../img/splash.svg") center bottom -15px no-repeat;
+		background-size: 100%;
 	}
 }
 
@@ -113,9 +122,13 @@ article {
 			transform: translateY(-50%);
 			color: @white;
 			h1 {
+				color: @white;
 				font-size: 60px;
 				line-height: 72px;
-				margin-bottom: 30px;
+				margin:0 0 30px 0;
+				font-family: inherit;
+				border: none;
+				padding: 0;
 			}
 			h3 {
 				text-transform: none;
@@ -148,30 +161,58 @@ article {
 		margin-bottom: 15px;
 	}
 }
-.product {
-	background-color: @white;
+.breadcrumbs {
+	font-size: 16px;
+	background-color: @darkblue;
+	padding: 4px 0;
+	a {
+		padding-right: 40px;
+		color: @white;
+		position: relative;
+		&:hover {
+			color: @gray;
+		}
+		&:after {
+			.fontawesome;
+			content: "\f105";
+			position: absolute;
+			right: 15px;
+			height: 16px;
+			margin-top: -8px;
+			top: 50%;
+		}
+	}
+	span {
+		color: @bluelight2;
+	}
+}
+.content {
+	padding: 60px 0;
+	h1, .h1 {
+		margin-bottom: 60px;
+	}
+}
+.big {
+	font-size: 60px;
+	font-weight: bolder;
+}
+.about {
+	color: @p_title;
 	text-align: center;
-	&-link {
-		display: block;
-		&__img {
-			display: inline-block;
-			margin-bottom: 5px;
-		}
-		&__title {
-			.h4;
-			font-weight: bold;
-			color: @p_title;
-			margin-bottom: 10px;
-		}
+	&-title {
+		font-size: 30px;
+		padding-bottom: 15px;
+		border-bottom: 1px solid @gray;
+		margin-bottom: 15px;
 	}
-	&-price {
-		margin-bottom: 10px;
-		span {
-			display: inline-block;
-			padding: 5px 15px;
-			background-color: @yellow;
-		}
+	&-description {
+		margin-bottom: 30px;
 	}
-	&-button {
+}
+.delivery-map {
+	text-align: center;
+	padding: 30px 0;
+	img {
+		display: inline-block;
 	}
 }

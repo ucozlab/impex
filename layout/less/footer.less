@@ -1,14 +1,13 @@
 @import (reference) "config.less";
 
 .footer {
-    &-contacts {
-        position: absolute;
-        width: 100%;
-        margin-top: -300px;
-    }
     &-copyright {
         padding: 15px 0;
     }
+}
+.section-contacts {
+    margin-bottom: -220px;
+    padding: 100px 0 0 0;
 }
 .contacts {
     display: table;
@@ -16,7 +15,7 @@
     padding: 0;
     background-color: @white;
     box-shadow: 0 0 9px 0 rgba(11, 19, 43, 0.58);
-    &-blue, &-form {
+    &-left, &-form {
         display: table-cell;
         vertical-align: top;
         padding: 30px;
@@ -25,8 +24,10 @@
             margin-bottom: 30px;
         }
     }
-    &-blue {
+    &-left {
         width: 470px;
+    }
+    &-blue {
         background-color: @darkblue;
         color: @white;
     }
@@ -65,6 +66,15 @@
         }
         &-link {
             display: block;
+        }
+    }
+}
+.content {
+    .contacts {
+        background: none;
+        box-shadow: none;
+        &-left, &-form {
+            padding: 0;
         }
     }
 }
